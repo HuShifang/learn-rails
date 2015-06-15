@@ -12,7 +12,7 @@ gem 'rails', '4.0.1'
 
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'  MOVED DOWN BELOW TO DESIGNATE IT AS DEVELOPMENT STAGE ONLY PER p225-226
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -73,14 +73,21 @@ group :development do
 
 	# generates files for an application layout
 	gem 'rails_layout'
+
+	gem 'sqlite3'
 end
 
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+	gem 'thin'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+# gem 'unicorn' PER p224-225, THIS IS BEST FOR BIG SITES; IT REQUIRES MORE COMPLEX MANAGEMENT
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
