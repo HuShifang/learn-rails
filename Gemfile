@@ -52,7 +52,7 @@ gem 'figaro'
 gem 'gibbon'
 
 # use Google Drive spreadsheets for data storage
-gem 'google_drive'
+gem 'google_drive', '0.3.6'
 
 # for static pages like “about”
 gem 'high_voltage'
